@@ -6,11 +6,9 @@
   box-sizing: border-box;
 }
 
-body {
-  padding: 16px 16px 32px 16px;
-}
 
 header {
+  padding: 16px 16px 32px 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,10 +32,11 @@ header {
 }
 
 .top-section {
+  padding-left: 16px;
+  padding-right: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 32px;
   text-align: center;
 }
 
@@ -63,6 +62,8 @@ header {
 }
 
 .gallery {
+  padding-left: 16px;
+  padding-right: 16px;
   flex-direction: column;
   display: flex;
   margin-top: 32px;
@@ -262,16 +263,123 @@ header {
   left: 191px;
 }
 
+.profile {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Amys-photo {
+  width: 300px;
+  height: 300px;
+}
+
+.introduction {
+  margin-top: 40px;
+  width: 343px;
+  height: 66px;
+  font-family: Plus Jakarta Sans;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 32.76px;
+  text-align: center;
+  color: #030303;
+}
+
+.about-Amy {
+  margin-top: 24px;
+  width: 343px;
+  height: 104px;
+  font-family: Plus Jakarta Sans;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: #7A746E;
+}
+
+.red-btn {
+  margin-top: 24px;
+  margin-left: 83px;
+  width: 176px;
+  height: 44px;
+  border-radius: 28px;
+  background-color: #EB7565;
+  font-family: Plus Jakarta Sans;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 28px;
+  color: #FFF7F0;
+}
+
+/* slider */
+.title {
+  width: 102px;
+  height: 30px;
+  margin-top: 108px;
+  font-family: Plus Jakarta Sans;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30.24px;
+  color: #030303;
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.navigation {
+  margin-top: 32px;
+  display: flex;
+  column-gap: 16px;
+}
 
 
+.navigation .nav-btn {
+  background: #030303;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
 
+.carousel {
+  overflow: hidden;
+  display: flex;
+  /* flex-direction: row; */
+  column-gap: 15px;
+  margin-top: 32px;
+}
+
+.carousel img {
+  width: 100%;
+}
+
+.item {
+  width: 270px;
+  height: 180px;
+  /* display: none; */
+}
+
+.main {
+  display: block;
+}
 
 /* medya query 768 */
 
 @media only screen and (min-width: 768px) {
-
-  body {
-    padding: 34px 39px 56px 39px;
+  header {
+    padding: 34px 40px 64px 39px;
   }
 
   .logo {
@@ -283,10 +391,6 @@ header {
     width: 228px;
     height: 56px;
     font-size: 16px;
-  }
-
-  .top-section {
-    margin-top: 64px;
   }
 
   .top-h3 {
@@ -305,6 +409,8 @@ header {
   }
 
   .gallery {
+    padding-left: 39px;
+    padding-right: 39px;
     margin-top: 64px;
     flex-direction: row;
     column-gap: 24px;
@@ -368,21 +474,76 @@ header {
     column-gap: 23px;
     flex-direction: row;
   }
+
+  .profile {
+    padding-right: 39px;
+    margin-top: 120px;
+    flex-direction: row;
+    column-gap: 35px;
+    overflow: hidden;
+  }
+
+  .Amys-photo {
+    width: 364px;
+    height: 364px;
+    transform: translateX(-43px);
+  }
+
+  .introduction {
+    margin-top: 0px;
+    width: 339px;
+    height: 120px;
+    font-size: 32px;
+    line-height: 40.32px;
+    text-align: left;
+  }
+
+  .about-Amy {
+    width: 339px;
+    height: 140px;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: left;
+  }
+
+  /* slider */
+  .title {
+    width: 136px;
+    height: 40px;
+    margin-top: 120px;
+    font-size: 32px;
+    line-height: 40.32px;
+  }
+
+  .navigation {
+    margin-top: 56px;
+  }
+
+  .carousel {
+    column-gap: 30px;
+    margin-top: 56px;
+  }
+
+  .item {
+    width: 540px;
+    height: 360px;
+    /* display: none; */
+  }
+
+  .main {
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
 
-  body {
-    padding: 34px 165px 64px 165px;
+  header {
+    padding: 34px 164px 66px 165px;
   }
 
   .btn:hover {
     background-color: #755CDE;
     cursor: pointer;
-  }
-
-  .top-section {
-    margin-top: 66px;
   }
 
   .top-h3 {
@@ -399,6 +560,8 @@ header {
   }
 
   .gallery {
+    padding-left: 165px;
+    padding-right: 165px;
     margin-top: 80px;
   }
 
@@ -452,5 +615,37 @@ header {
   .motion-pattern {
     left: 202px;
   }
+
+  .profile {
+    padding-left: 165;
+    padding-right: 165px;
+    margin-top: 136px;
+    column-gap: 125px;
+  }
+
+  .Amys-photo {
+    margin-left: 165px;
+    width: 445px;
+    height: 445px;
+    transform: translate(0);
+  }
+
+  .introduction {
+    width: 540px;
+    height: 100px;
+    font-size: 40px;
+    line-height: 50.4px;
+  }
+
+  .about-Amy {
+    width: 540px;
+    height: 84px;
+  }
+
+  .red-btn:hover {
+    background-color: #F6A560;
+    cursor: pointer;
+  }
+
 
 }
